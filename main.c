@@ -3,10 +3,9 @@
 
 int	main(int argc, char *argv[])
 {
-	int		size;
 	char	**str;
 
-	if (argc  >= 2)
+	if (argc >= 2)
 	{
 		if (argc > 2)
 		{
@@ -19,5 +18,5 @@ int	main(int argc, char *argv[])
 		}
 	}
 	else
-		ft_error(void);
+		return (0);
 }
