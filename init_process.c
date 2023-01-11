@@ -12,12 +12,20 @@ void	init_process(int argc, char *argv[])
 
 void	init_process2(char **str)
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	int	*tab;
+	int	size;
+	int	i;
 
-	if (!check_input2(str))
+	i = 0;
+	size = ft_strlen(*str);
+	if (!check_input_process2(*str))
 		ft_error();
-
+	tab = malloc(sizeof(int) * size);
+	while (tab)
+	{
+		tab[i] = ft_atoi_mod(str[i]);
+		i++;
+	}
 }
 
 void	ft_error(void)
