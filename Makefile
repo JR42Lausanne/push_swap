@@ -10,15 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =
-
+SRCS =	main.c					\
+		init_process.c			\
+		check_input_process2.c	
 
 NAME = push_swap
 LIB  = libft.a
 
 OBJS_SRCS = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
 
 CC = gcc
 
@@ -31,7 +32,7 @@ $(LIB):
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME) : $(LIB) $(OBJS_SRCS)
-	$(CC) -L. -lft -o $(NAME) $(OBJS_SRCS)
+	$(CC) $(CFLAGS) -L. -lft -o $(NAME) $(OBJS_SRCS)
 
 clean:
 	rm -rf $(OBJS_SRCS)

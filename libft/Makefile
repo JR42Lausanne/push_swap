@@ -72,7 +72,7 @@ OBJS_SRCS = $(SRCS:.c=.o)
 
 OBJS_BSRCS = $(B_SRCS:.c=.o)  
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
 CC = gcc $(CFLAGS)
 
 $(NAME) : $(OBJS_SRCS)

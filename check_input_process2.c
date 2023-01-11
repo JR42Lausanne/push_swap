@@ -76,7 +76,7 @@ int	check_double(int *tab, int size)
 		}
 		i++;
 	}
-	return (1);	
+	return (1);
 }	
 
 int	check_input_process2(char *str)
