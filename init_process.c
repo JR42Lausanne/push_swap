@@ -26,6 +26,8 @@ void	init_process2(char **str)
 		tab[i] = ft_atoi_mod(str[i]);
 		i++;
 	}
+	if (!check_double(tab, size))
+		ft_error();
 }
 
 void	ft_error(void)

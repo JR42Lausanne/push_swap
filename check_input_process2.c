@@ -59,6 +59,26 @@ int	ft_atoi_mod(char *str)
 	return (res * sign);
 }
 
+int	check_double(int *tab, int size)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < size)
+	{
+		j = i + 1;
+		while (j < size)
+		{
+			if (tab[i] == tab[j])
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);	
+}	
+
 int	check_input_process2(char *str)
 {
 	int	value;

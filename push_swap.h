@@ -23,6 +23,5 @@ int		check_input(int argc, char *argv);
 int		check_input_process2(char *str);
 int		is_correct_input(int val);
 int		ft_atoi_mod(char *str);
-void	ft_exit_process(void);
-int		check_space_and_sign(char *str);
+int		check_double(int *tab, int size);
 #endif
