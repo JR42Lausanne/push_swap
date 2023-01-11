@@ -16,8 +16,13 @@ void	init_process2(char **str, int size)
 	int	i;
 
 	i = 0;
-	if (!check_input_process2(*str))
-		ft_error();
+	while (str[i] != 0)
+	{
+		if (!check_input_process2(str[i]))
+			ft_error();
+		i++;
+	}
+	i = 0;
 	tab = malloc(sizeof(int) * size);
 	while (str[i] != 0)
 	{
@@ -27,7 +32,7 @@ void	init_process2(char **str, int size)
 	if (!check_double(tab, size))
 		ft_error();
 	i = 0;
-	while (tab[i] != 0)
+	while (i < size)
 	{
 		printf("%d\n", tab[i]);
 		i++;

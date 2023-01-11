@@ -6,6 +6,7 @@ static int	check_is_alpha(char *str)
 	int	i;
 
 	i = 0;
+	//printf("%s\n", str);
 	while (str[i] != 0)
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
@@ -81,10 +82,9 @@ int	check_double(int *tab, int size)
 
 int	check_input_process2(char *str)
 {
-	int	value;
-
-	value = 0;
-	value = check_is_alpha(str);
-	value = check_sign(str);
-	return (value);
+	if (!(check_is_alpha(str)))
+		return (0);
+	if (!(check_sign(str)))
+		return (0);
+	return (1);
 }
