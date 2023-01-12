@@ -14,17 +14,9 @@ int	main(int argc, char *argv[])
 			size++;
 		init_process2(tab_str, size);
 	}
+	else if (argc > 2)
+		init_process2(argv + 1, argc - 1);
 	else
-		write(1, "\n", 1);
+		ft_error(__func__);
 	return (0);
 }
-/*
-		if (argc > 2)
-		{
-			init_process(argc - 1, argv + 1);
-		}	
-		else
-		{
-		str = ft_split(argv[1], ' ');
-
-*/
