@@ -8,7 +8,8 @@ static int	check_is_alpha(char *str)
 	i = 0;
 	while (str[i] != 0)
 	{
-		if (!(str[i] >= '0' && str[i] <= '9') && !(str[i] == '+' || str[i] == '-'))
+		if (!(str[i] >= '0' && str[i] <= '9')
+			&& !(str[i] == '+' || str[i] == '-'))
 		{
 			ft_error(__func__);
 			return (0);
@@ -32,6 +33,11 @@ static int	check_sign(char *str)
 				ft_error(__func__);
 				return (0);
 			}
+			else if (str[i + 1] == '\0' || str[i] == '\0')
+			{
+				ft_error(__func__);
+				return (0);
+			}	
 		}
 		i++;
 	}
@@ -88,7 +94,7 @@ int	check_double(int *tab, int size)
 	return (1);
 }	
 
-int	check_input_process2(char *str)
+int	check_input_process(char *str)
 {
 	if (!(check_is_alpha(str)))
 		return (0);

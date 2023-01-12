@@ -1,16 +1,7 @@
 
 #include "push_swap.h"
-/*
-void	init_process(int argc, char *argv[])
-{
-//	t_stack	*stack_a;
-//	t_stack	*stack_b;
 
-	if (!check_input(argc, *argv))
-		ft_error();
-}
-*/
-void	init_process2(char **str, int size)
+void	init_process(char **str, int size)
 {
 	int	*tab;
 	int	i;
@@ -18,7 +9,7 @@ void	init_process2(char **str, int size)
 	i = 0;
 	while (str[i] != 0)
 	{
-		if (!check_input_process2(str[i]))
+		if (!check_input_process(str[i]))
 			ft_error(__func__);
 		i++;
 	}
@@ -41,7 +32,8 @@ void	init_process2(char **str, int size)
 
 void	ft_error(const char *err_func)
 {
-	write(1, "Error\n", 6);
-	ft_printf("-> %s\n", err_func);
+	write(2, "Error\n", 6);
+	if (DEBUG == 1)
+		ft_printf("-> %s\n", err_func);
 	exit(EXIT_FAILURE);
 }
