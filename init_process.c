@@ -19,7 +19,7 @@ void	init_process2(char **str, int size)
 	while (str[i] != 0)
 	{
 		if (!check_input_process2(str[i]))
-			ft_error();
+			ft_error(__func__);
 		i++;
 	}
 	i = 0;
@@ -30,7 +30,7 @@ void	init_process2(char **str, int size)
 		i++;
 	}
 	if (!check_double(tab, size))
-		ft_error();
+		ft_error(__func__);
 	i = 0;
 	while (i < size)
 	{
@@ -39,8 +39,9 @@ void	init_process2(char **str, int size)
 	}
 }
 
-void	ft_error(void)
+void	ft_error(const char *err_func)
 {
 	write(1, "Error\n", 6);
+	ft_printf("-> %s\n", err_func);
 	exit(EXIT_FAILURE);
 }

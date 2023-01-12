@@ -6,11 +6,13 @@ static int	check_is_alpha(char *str)
 	int	i;
 
 	i = 0;
-	//printf("%s\n", str);
 	while (str[i] != 0)
 	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
+		if (!(str[i] >= '0' && str[i] <= '9') && !(str[i] == '+' || str[i] == '-'))
+		{
+			ft_error(__func__);
 			return (0);
+		}
 		i++;
 	}
 	return (1);
@@ -26,7 +28,10 @@ static int	check_sign(char *str)
 		if (str[i] == '-' || str[i] == '+')
 		{
 			if (str[i + 1] == '-' || str[i + 1] == '+')
+			{
+				ft_error(__func__);
 				return (0);
+			}
 		}
 		i++;
 	}
@@ -55,8 +60,8 @@ int	ft_atoi_mod(char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	if (res > INTMAX || res < INTMIN)
-		ft_error();
+	if (res * sign > INTMAX || res * sign < INTMIN)
+		ft_error(__func__);
 	return (res * sign);
 }
 
@@ -72,7 +77,10 @@ int	check_double(int *tab, int size)
 		while (j < size)
 		{
 			if (tab[i] == tab[j])
+			{
+				ft_error(__func__);
 				return (0);
+			}
 			j++;
 		}
 		i++;

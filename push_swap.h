@@ -18,7 +18,7 @@ typedef struct s_stack
 
 //void	init_process(int argc, char *argv[]);
 void	init_process2(char **str, int size);
-void	ft_error(void);
+void	ft_error(const char *err_func);
 //int		check_input(int argc, char *argv);
 int		check_input_process2(char *str);
 //int		is_correct_input(int val);
