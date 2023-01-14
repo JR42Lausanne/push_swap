@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/14 16:10:45 by jlaiti           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -13,6 +25,14 @@
 #  define DEBUG 0
 # endif
 
+typedef struct s_parse
+{
+	int		size;
+	char	**tab_str;
+	int		*array;
+
+}		t_parse;
+
 typedef struct s_stack
 {
 	int				index;
@@ -20,9 +40,9 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-void	init_process(char **str, int size);
+void	init_process(t_parse parse);
 void	ft_error(const char *err_func);
 int		check_input_process(char *str);
 int		ft_atoi_mod(char *str);
-int		check_double(int *tab, int size);
+int		check_double(t_parse parse);
 #endif

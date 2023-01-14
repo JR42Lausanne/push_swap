@@ -1,31 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_process.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 15:22:56 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/14 16:16:45 by jlaiti           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init_process(char **str, int size)
+void	init_process(t_parse parse)
 {
-	int	*tab;
 	int	i;
 
 	i = 0;
-	while (str[i] != 0)
+	while (parse.tab_str[i] != 0)
 	{
-		if (!check_input_process(str[i]))
+		if (!check_input_process(parse.tab_str[i]))
 			ft_error(__func__);
 		i++;
 	}
 	i = 0;
-	tab = malloc(sizeof(int) * size);
-	while (str[i] != 0)
+	parse.array = malloc(sizeof(int) * parse.size);
+	while (parse.tab_str[i] != 0)
 	{
-		tab[i] = ft_atoi_mod(str[i]);
+		parse.array[i] = ft_atoi_mod(parse.tab_str[i]);
 		i++;
 	}
-	if (!check_double(tab, size))
+	if (!check_double(parse))
 		ft_error(__func__);
 	i = 0;
-	while (i < size)
+	while (i < parse.size)
 	{
-		printf("%d\n", tab[i]);
+		printf("%d\n", parse.array[i]);
 		i++;
 	}
 }

@@ -1,21 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/14 15:41:41 by jlaiti           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
 int	main(int argc, char *argv[])
 {
-	char	**tab_str;
-	int		size;
+	t_parse	parse;
 
 	if (argc == 2)
 	{	
-		size = 0;
-		tab_str = ft_split(argv[1], ' ');
-		while (tab_str[size] != 0)
-			size++;
-		init_process(tab_str, size);
+		parse.size = 0;
+		parse.tab_str = ft_split(argv[1], ' ');
+		while (parse.tab_str[parse.size] != 0)
+			parse.size++;
+		init_process(parse);
 	}
 	else if (argc > 2)
-		init_process(argv + 1, argc - 1);
+	{
+		parse.size = (argc - 1);
+		parse.tab_str = (argv + 1);
+		init_process(parse);
+	}
 	else
 		ft_error(__func__);
 	return (0);

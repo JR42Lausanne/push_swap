@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_input_process.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 15:22:43 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/14 16:11:10 by jlaiti           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -71,18 +82,18 @@ int	ft_atoi_mod(char *str)
 	return (res * sign);
 }
 
-int	check_double(int *tab, int size)
+int	check_double(t_parse parse)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < size)
+	while (i < parse.size)
 	{
 		j = i + 1;
-		while (j < size)
+		while (j < parse.size)
 		{
-			if (tab[i] == tab[j])
+			if (parse.array[i] == parse.array[j])
 			{
 				ft_error(__func__);
 				return (0);
