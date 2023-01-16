@@ -82,18 +82,18 @@ int	ft_atoi_mod(char *str)
 	return (res * sign);
 }
 
-int	check_double(t_parse parse)
+int	check_double(t_parse *parse)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < parse.size)
+	while (i < parse->size)
 	{
 		j = i + 1;
-		while (j < parse.size)
+		while (j < parse->size)
 		{
-			if (parse.array[i] == parse.array[j])
+			if (parse->array[i] == parse->array[j])
 			{
 				ft_error(__func__);
 				return (0);

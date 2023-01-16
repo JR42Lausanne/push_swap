@@ -33,16 +33,24 @@ typedef struct s_parse
 
 }		t_parse;
 
+/*
 typedef struct s_stack
 {
 	int				index;
 	int				value;
 	struct s_stack	*next;
 }					t_stack;
+*/
 
-void	init_process(t_parse parse);
+typedef t_list	t_stack;
+
+void	init_process(t_parse *parse);
 void	ft_error(const char *err_func);
 int		check_input_process(char *str);
 int		ft_atoi_mod(char *str);
-int		check_double(t_parse parse);
+int		check_double(t_parse *parse);
+void	free_parse(t_parse *parse);
+t_stack	*parse_input(int argc, char *argv[]);
+t_stack	*create_stack(t_parse *parse);
+
 #endif

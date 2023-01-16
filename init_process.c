@@ -12,30 +12,30 @@
 
 #include "push_swap.h"
 
-void	init_process(t_parse parse)
+void	init_process(t_parse *parse)
 {
 	int	i;
 
 	i = 0;
-	while (parse.tab_str[i] != 0)
+	while (parse->tab_str[i] != 0)
 	{
-		if (!check_input_process(parse.tab_str[i]))
+		if (!check_input_process(parse->tab_str[i]))
 			ft_error(__func__);
 		i++;
 	}
 	i = 0;
-	parse.array = malloc(sizeof(int) * parse.size);
-	while (parse.tab_str[i] != 0)
+	parse->array = malloc(sizeof(int) * parse->size);
+	while (parse->tab_str[i] != 0)
 	{
-		parse.array[i] = ft_atoi_mod(parse.tab_str[i]);
+		parse->array[i] = ft_atoi_mod(parse->tab_str[i]);
 		i++;
 	}
 	if (!check_double(parse))
 		ft_error(__func__);
 	i = 0;
-	while (i < parse.size)
+	while (i < parse->size)
 	{
-		printf("%d\n", parse.array[i]);
+		printf("%d\n", parse->array[i]);
 		i++;
 	}
 }

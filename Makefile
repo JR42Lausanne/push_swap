@@ -12,7 +12,10 @@
 
 SRCS =	main.c					\
 		init_process.c			\
-		check_input_process.c	
+		check_input_process.c	\
+		parse_input.c			\
+		create_stack.c			\
+
 
 NAME = push_swap
 LIB  = libft.a
@@ -20,7 +23,7 @@ LIB  = libft.a
 OBJS_SRCS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
-CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g3
+CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g
 
 CC = gcc
 
