@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:43 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/14 16:11:10 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/17 15:12:58 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	check_sign(char *str)
 			{
 				ft_error(__func__);
 				return (0);
-			}	
+			}
 		}
 		i++;
 	}

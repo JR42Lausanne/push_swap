@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_stack.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/17 14:40:48 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/17 15:27:35 by jlaiti           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
 t_stack	*create_stack(t_parse *parse)
 {
-	int	*index_tab;
-	t_stack	*a;
-	int	i;
-	int	j;
-	int	count_above;
+	int			*index_tab;
+	t_stack		*a;
+	int			i;
+	int			j;
+	int			count_above;
 
 	a = NULL;
 	index_tab = malloc(sizeof(int) * parse->size);
@@ -28,7 +39,6 @@ t_stack	*create_stack(t_parse *parse)
 	}
 	i = -1;
 	while (++i < parse->size)
-		ft_printf("%d ", index_tab[i]);
-	ft_printf("\n");
+		ft_lstadd_back(&a, ft_lstnew(&index_tab[i]));
 	return (a);
 }
