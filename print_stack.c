@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   big_sort.c                                         :+:      :+:    :+:   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 18:34:03 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 17:59:06 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 18:25:17 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	big_sort(t_stack *a, t_stack *b, int size)
+void	print_stack_big(t_stack *stack, char *stack_name)
 {
-	int	i;
-	int	j;
-	int	elem;
-
-	i = -1;
-	while (++i < 32)
+	printf("------- %s ------\n", stack_name);
+	while (stack)
 	{
-		j = -1;
-		while (++j < size)
-		{
-			elem = (int) ft_lstlast(a)->content;
-			if ((elem >> i) & 1)
-				ra(a);
-			else
-				pb(&a, b);
-		}
-		j = -1;
-		while (++j < size)
-		{
-			pa(a, b);
-		}
+		printf("%d\n", *(int *) stack->content);
+		stack = stack->next;
 	}
 }

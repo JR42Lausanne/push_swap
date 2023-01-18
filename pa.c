@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   big_sort.c                                         :+:      :+:    :+:   */
+/*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 18:34:03 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 15:04:30 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 17:58:32 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	big_sort(t_stack *a, t_stack *b, int size)
-{
-	int	i;
-	int	j;
-	int	elem;
+void	pa(t_stack *a, t_stack *b)
+{	
+	t_stack	*b_top;
 
-	i = -1;
-	while (++i < 32)
-	{
-		j = -1;
-		while (++j < size)
-		{
-			elem = (int) ft_lstlast(a)->content;
-			if ((elem >> i) & 1)
-				ra(a);
-			else
-				pb(&a, b);
-		}
-		j = -1;
-		while (++j < size)
-		{
-			pa(a, b);
-		}
-	}
+	if (!b)
+		return ;
+	b_top = ft_lstlast(b);
+	ft_lstadd_back(&a, ft_lstnew(b_top->content));
+	ft_lstdelone(b->content, free);
+	ft_printf("pa\n");
 }

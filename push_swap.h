@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 14:33:59 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/18 18:34:00 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # ifndef DEBUG
 #  define DEBUG 0
 # endif
+
+# define print_stack(stack) print_stack_big(stack, #stack);
 
 typedef struct s_parse
 {
@@ -56,6 +58,10 @@ void	check_sort(t_stack *a, t_stack *b);
 void	big_sort(t_stack *a, t_stack *b, int size);
 
 //operations
-void	ra(t_stack *a);	
+void	ra(t_stack *a);
+void	pb(t_stack **a, t_stack *b);
+void	pa(t_stack *a, t_stack *b);
 
+//printing
+void	print_stack_big(t_stack *stack, char *stack_name);
 #endif

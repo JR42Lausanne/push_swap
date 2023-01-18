@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   big_sort.c                                         :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 18:34:03 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 15:01:04 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 18:41:41 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	big_sort(t_stack *a, t_stack *b, int size)
+void	pb(t_stack **a, t_stack *b)
 {
-	int	i;
-	int	j;
-	int	elem;
+	t_stack	*a_top;
 
-	i = -1;
-	while (++i < 32)
+	if (!a)
+		return ;
+	if (!*a)
+		return ;
+	a_top = ft_lstlast(*a);
+	ft_lstadd_back(&b, ft_lstnew(a_top->content));
+	ft_printf("pb\n");
+	if (!(*a)->next)
 	{
-		j = -1;
-		while (++j < size)
-		{
-			elem = (int) ft_lstlast(a)->content;
-			if ((elem >> i) & 1)
-				ra(a);
-			else
-				pb(&a, b);
-		}
-		j = -1;
-		while (++j < size)
-		{
-			pa(a, b);
-		}
+		*a = NULL;
+		return ;
 	}
+	while ((*a)->next->next)
+		*a = (*a)->next;
+	(*a)->next = NULL;
 }

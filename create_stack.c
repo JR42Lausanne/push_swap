@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:40:48 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 10:03:34 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/18 18:06:26 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ t_stack	*create_stack(t_parse *parse)
 	}
 	i = -1;
 	while (++i < parse->size)
-		ft_lstadd_back(&a, ft_lstnew(&index_tab[i]));
+		ft_lstadd_front(&a, ft_lstnew(&index_tab[i]));
 	return (a);
 }
