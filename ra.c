@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 12:57:57 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 14:26:17 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 14:40:26 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	ra(t_stack *a)
 {
-	t_stack	*a;
-	t_stack	*a_copy;
-	t_stack	*b;
+	int		temp;
 
-	b = NULL;
-	a = parse_input(argc, argv);
-	a_copy = a;
-	while (a)
+	temp = (int) a->content;
+	while (a->next)
 	{
-		printf("%d\n", *(int *) a->content);
-		a = a->next;
+		*(int *)(a->content) = *(int *)(a->next->content);
 	}
-	check_sort(a_copy, b);
-	printf("flag2\n");
-	return (0);
+	*(int *)a->content = temp;
+	ft_printf("ra\n");
 }

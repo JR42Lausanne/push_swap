@@ -6,7 +6,7 @@
 #    By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/24 14:49:17 by jlaiti            #+#    #+#              #
-#    Updated: 2023/01/04 15:55:33 by jlaiti           ###   ########.fr        #
+#    Updated: 2023/01/18 12:56:32 by jlaiti           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ SRCS =	main.c					\
 		check_input_process.c	\
 		parse_input.c			\
 		create_stack.c			\
+		check_sort.c			\
+		big_sort.c				\
 
 
 NAME = push_swap

@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/14 16:10:45 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/18 14:33:59 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,10 @@ int		check_double(t_parse *parse);
 void	free_parse(t_parse *parse);
 t_stack	*parse_input(int argc, char *argv[]);
 t_stack	*create_stack(t_parse *parse);
+void	check_sort(t_stack *a, t_stack *b);
+void	big_sort(t_stack *a, t_stack *b, int size);
+
+//operations
+void	ra(t_stack *a);	
 
 #endif

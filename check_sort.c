@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 12:57:57 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 10:13:12 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 14:15:49 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	check_sort(t_stack *a, t_stack *b)
 {
-	t_stack	*a;
-	t_stack	*a_copy;
-	t_stack	*b;
+	int	size;
 
-	b = NULL;
-	a = parse_input(argc, argv);
-	a_copy = a;
-	while (a)
+	printf("hello\n");
+	size = ft_lstsize(a);
+	printf("size->%d\n", size);
+	/*if (size <= 5)
 	{
-		printf("%d\n", *(int *) a->content);
-		a = a->next;
-	}
-	check_sort(a_copy, b);
-	printf("flag2\n");
-	return (0);
+		if (size == 1)
+			little_sort(a));
+		else if (size == 2)
+		{
+			llll
+		}
+		else if (size == 3)
+		{
+			llll
+		}
+		else
+			llll
+
+	}*/
+	big_sort(a, b, size);
 }

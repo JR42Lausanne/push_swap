@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   big_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 12:57:57 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/18 14:40:42 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	big_sort(t_stack *a, t_stack *b, int size)
 {
-	t_stack	*a;
-	t_stack	*a_copy;
-	t_stack	*b;
+	int	i;
+	int	j;
+	int	elem;
 
-	b = NULL;
-	a = parse_input(argc, argv);
-	a_copy = a;
-	while (a)
+	i = -1;
+	while (++i < sizeof(int) * 8)
 	{
-		printf("%d\n", *(int *) a->content);
-		a = a->next;
+		j = -1;
+		while (++j < size)
+		{
+			elem = (int) ft_lstlast(a)->content;
+			if ((elem >> i) & 1)
+				ra(a);
+			else
+			{	
+				//ft_lstadd_front(&a, ft_lstnew(&b->content));
+				//printf("pb\n");
+			}
+		}
+		j = -1;
+		while (++j < size)
+		{
+			//ft_lstadd_front(&b, ft_lstnew(&a->content));
+			//ft_printf("pa\n");
+		}	
 	}
-	check_sort(a_copy, b);
-	printf("flag2\n");
-	return (0);
 }
