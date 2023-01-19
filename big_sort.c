@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 21:32:29 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/19 13:27:46 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	big_sort(t_stack *a, t_stack *b, int size)
 			if ((elem >> i) & 1)
 				ra(a);
 			else
-				pb(a, b);
+				pb(&a, &b);
 		}
 		j = -1;
 		while (++j < size)

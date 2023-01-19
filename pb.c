@@ -6,43 +6,28 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:01:04 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 21:47:21 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/19 13:35:02 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	del_last(t_stack **stack)
+void	pb(t_stack **a, t_stack **b)
 {
-	t_stack	*temp;
+	int		*temp_ptr;
+	t_stack	*copy;
 
-	temp = *stack;
-	if ((*stack)->next == NULL)
-		;
-	ft_lstdelone(temp, free);
-}
-
-void	pb(t_stack *a, t_stack *b)
-{
-	t_stack	*a_top;
-	int		*temp;
-
-	if (!a)
+	if (!a || !*a)
 		return ;
-	temp = malloc(sizeof(int *));
-	a_top = ft_lstlast(a);
-	*temp = *(int *) a_top->content;
-	ft_lstadd_back(&b, ft_lstnew(temp));
+	temp_ptr = malloc(sizeof(int));
+	if (!temp_ptr)
+		return ;
+	*temp_ptr = *(int *)ft_lstlast(*a)->content;
+	ft_lstadd_back(b, ft_lstnew((void *)temp_ptr));
+	copy = *a;
+	while (copy->next && copy->next->next)
+		copy = copy->next;
+	ft_lstdelone(ft_lstlast(*a), free);
+	copy->next = NULL;
 	ft_printf("pb\n");
-	ft_lstdelone(a_top, free);
-	/*
-	if (!(*a)->next)
-	{
-		*a = NULL;
-		return ;
-	}
-	while ((*a)->next->next)
-		*a = (*a)->next;
-	(*a)->next = NULL;
-	*/
 }
