@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/19 13:23:26 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/20 14:29:19 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	big_sort(t_stack *a, t_stack *b, int size);
 //operations
 void	ra(t_stack *a);
 void	pb(t_stack **a, t_stack **b);
-void	pa(t_stack *a, t_stack *b);
+void	pa(t_stack **a, t_stack **b);
 
 //printing
 void	print_stack_big(t_stack *stack, char *stack_name);

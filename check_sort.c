@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:13:12 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 17:19:15 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/20 14:38:30 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ void	check_sort(t_stack *a, t_stack *b)
 
 	}*/
 	big_sort(a, b, size);
+//	printf("segfault\n");
 }

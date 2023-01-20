@@ -6,20 +6,28 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:04:30 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/18 17:58:32 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/20 14:30:32 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stack *a, t_stack *b)
+void	pa(t_stack **a, t_stack **b)
 {	
-	t_stack	*b_top;
+	int		*temp_ptr;
+	t_stack	*copy;
 
-	if (!b)
+	if (!b || !*b)
 		return ;
-	b_top = ft_lstlast(b);
-	ft_lstadd_back(&a, ft_lstnew(b_top->content));
-	ft_lstdelone(b->content, free);
+	temp_ptr = malloc(sizeof(int));
+	if (!temp_ptr)
+		return ;
+	*temp_ptr = *(int *)ft_lstlast(*b)->content;
+	ft_lstadd_back(a, ft_lstnew((void *)temp_ptr));
+	copy = *b;
+	while (copy->next && copy->next->next)
+		copy = copy->next;
+	ft_lstdelone(ft_lstlast(*b), free);
+	copy->next = NULL;
 	ft_printf("pa\n");
 }
