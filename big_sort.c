@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/20 14:59:20 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/21 09:57:53 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	big_sort(t_stack *a, t_stack *b, int size)
 	int	elem;
 
 	i = -1;
+	//print_stack_big(a, "t_stack a");
+	//print_stack_big(b, "t_stack b");
 	while (++i < 32)
 	{
 		j = -1;
@@ -31,9 +33,13 @@ void	big_sort(t_stack *a, t_stack *b, int size)
 				pb(&a, &b);
 		}
 		j = -1;
+		//print_stack_big(a, "t_stack a");
+		//print_stack_big(b, "t_stack b");
 		while (++j < size)
 		{
 			pa(&a, &b);
 		}
+		//print_stack_big(a, "t_stack a");
+		//print_stack_big(b, "t_stack b");
 	}
 }

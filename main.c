@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/20 15:00:15 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/21 09:43:12 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	main(int argc, char *argv[])
 
 	b = NULL;
 	a = parse_input(argc, argv);
-	print_stack_big(a, "t_stack a");
-	print_stack_big(b, "t_stack b");
+	//print_stack_big(a, "t_stack a");
+	//print_stack_big(b, "t_stack b");
 	check_sort(a, b);
-	print_stack_big(a, "t_stack a");
-	print_stack_big(b, "t_stack b");
+	//print_stack_big(a, "t_stack a");
+	//print_stack_big(b, "t_stack b");
 	//pb(&a, &b);
 	//pb(&a, &b);
 	//pa(&a, &b);
