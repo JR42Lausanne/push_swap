@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:13:12 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 16:20:03 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/23 17:50:03 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ void	check_sort(t_stack *a, t_stack *b)
 			if (!(is_sorted(a)))
 				ra(a);
 		}
-		else if (size == 3)
-		{
+		//else if (size == 3)
 			little_sort_3(a);
-		}
-	//	else
-	//		little_sort_4_5(a, b);
+		//else
+			little_sort_4_5(a, b, size);
 	}
 	else
 		big_sort(a, b, size);
