@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   big_sort.c                                         :+:      :+:    :+:   */
+/*   little_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 11:54:48 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/23 13:32:27 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/23 14:04:10 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	big_sort(t_stack *a, t_stack *b, int size)
+void	little_sort_3(t_stack *a, t_stack *b)
 {
-	int	i;
-	int	j;
-	int	elem;
-	int	size_b;
+	is_sorted(a);
 
-	i = -1;
-	while (++i < 32)
-	{
-		if (is_sorted(a))
-			return ;
-		size_b = 0;
-		j = -1;
-		while (++j < size)
-		{
-			elem = *(int *) ft_lstlast(a)->content;
-			if ((elem >> i) & 1)
-				ra(a);
-			else
-			{
-				pb(&a, &b);
-				size_b++;
-			}
-		}
-		j = -1;
-		while (++j < size_b)
-			pa(&a, &b);
-	}
+
+
+}
+
+void	little_sort_4_5(t_stack *a, t_stack *b)
+{
+	is_sorted(a);
+
+
+
 }

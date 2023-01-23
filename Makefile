@@ -6,7 +6,7 @@
 #    By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/24 14:49:17 by jlaiti            #+#    #+#              #
-#    Updated: 2023/01/18 18:02:48 by jlaiti           ###   ########.fr        #
+#    Updated: 2023/01/23 13:33:57 by jlaiti           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,12 @@ SRCS =	main.c					\
 		create_stack.c			\
 		check_sort.c			\
 		big_sort.c				\
+		little_sort.c			\
 		ra.c					\
 		pa.c					\
 		pb.c					\
 		print_stack.c           \
+		is_sorted.c				\
 
 
 NAME = push_swap

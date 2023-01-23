@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:24:20 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 11:27:55 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/23 11:57:05 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	main(int argc, char *argv[])
 	//pa(&a, &b);
 	//print_stack_big(a, "t_stack a");
 	//print_stack_big(b, "t_stack b");
+	printf("return\n");
 	return (0);
 }

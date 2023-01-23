@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   big_sort.c                                         :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 11:54:48 by jlaiti           ###   ########.fr       */
+/*   Created: 2023/01/23 11:43:03 by jlaiti            #+#    #+#             */
+/*   Updated: 2023/01/23 13:02:43 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	big_sort(t_stack *a, t_stack *b, int size)
+int	is_sorted(t_stack *a)
 {
-	int	i;
-	int	j;
-	int	elem;
-	int	size_b;
-
-	i = -1;
-	while (++i < 32)
+	while (a->next != NULL)
 	{
-		if (is_sorted(a))
-			return ;
-		size_b = 0;
-		j = -1;
-		while (++j < size)
+		if (*(int *) a->content < *(int *) a->next->content)
 		{
-			elem = *(int *) ft_lstlast(a)->content;
-			if ((elem >> i) & 1)
-				ra(a);
-			else
-			{
-				pb(&a, &b);
-				size_b++;
-			}
+			//ft_printf("not sorted\n");
+			return (0);
 		}
-		j = -1;
-		while (++j < size_b)
-			pa(&a, &b);
+		a = a->next;
 	}
+	//ft_printf("sorted\n");
+	return (1);
 }
