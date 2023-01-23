@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:48:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/21 09:57:53 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/23 11:32:15 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ void	big_sort(t_stack *a, t_stack *b, int size)
 	int	i;
 	int	j;
 	int	elem;
+	int	size_b;
 
 	i = -1;
-	//print_stack_big(a, "t_stack a");
-	//print_stack_big(b, "t_stack b");
 	while (++i < 32)
 	{
+		ft_printf("bit index: %d\n", i);
+		size_b = 0;
 		j = -1;
 		while (++j < size)
 		{
@@ -30,16 +31,13 @@ void	big_sort(t_stack *a, t_stack *b, int size)
 			if ((elem >> i) & 1)
 				ra(a);
 			else
+			{
 				pb(&a, &b);
+				size_b++;
+			}
 		}
 		j = -1;
-		//print_stack_big(a, "t_stack a");
-		//print_stack_big(b, "t_stack b");
-		while (++j < size)
-		{
+		while (++j < size_b)
 			pa(&a, &b);
-		}
-		//print_stack_big(a, "t_stack a");
-		//print_stack_big(b, "t_stack b");
 	}
 }

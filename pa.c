@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:04:30 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/20 14:30:32 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/23 11:19:33 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	pa(t_stack **a, t_stack **b)
 	int		*temp_ptr;
 	t_stack	*copy;
 
+	ft_printf("pa\n");
 	if (!b || !*b)
 		return ;
 	temp_ptr = malloc(sizeof(int));
@@ -29,5 +30,4 @@ void	pa(t_stack **a, t_stack **b)
 		copy = copy->next;
 	ft_lstdelone(ft_lstlast(*b), free);
 	copy->next = NULL;
-	ft_printf("pa\n");
 }
