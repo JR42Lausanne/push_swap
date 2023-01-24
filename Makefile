@@ -6,7 +6,7 @@
 #    By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/24 14:49:17 by jlaiti            #+#    #+#              #
-#    Updated: 2023/01/23 13:33:57 by jlaiti           ###   ########.fr        #
+#    Updated: 2023/01/24 11:16:21 by jlaiti           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCS =	main.c					\
 		big_sort.c				\
 		little_sort.c			\
 		ra.c					\
+		sa.c					\
+		rra.c					\
 		pa.c					\
 		pb.c					\
 		print_stack.c           \

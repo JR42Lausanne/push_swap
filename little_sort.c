@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:32:27 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 17:46:13 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/24 10:52:44 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,52 @@ void	little_sort_3(t_stack *a)
 		ft_printf("ra\n");
 }
 
-void	little_sort_4_5(t_stack *a, t_stack *b, int size)
+int	find_index(t_stack *a, int to_find)
 {
-	if (is_sorted(a))
-		return ;
-	while (a->next != NULL)
+	int	i;
+
+	i = 0;
+	while (a)
 	{
-		size++;
+		if (*(int *)a->content == to_find)
+			return (i);
 		a = a->next;
+		i++;
 	}
-	pb(&a, &b);
-	pb(&a, &b);
+	ft_error(__func__);
+	return (-1);
+}
+
+void	move_to_b(int index, int size, int *pos_1)
+{
+	if (index >= 2)
+	{
+		while (index-- != -1)
+		{
+			ft_printf("ra\n");
+			*pos_1 -= 1;
+		}
+	}
+	else
+	{
+		while (index++ < size)
+		{
+			ft_printf("rra\n");
+			*pos_1 += 1;
+		}
+	}
+	ft_printf("pb\n");
+}
+
+void	little_sort_4_5(t_stack *a, t_stack *b, int size)
+{	
+	int	pos_0;
+	int	pos_1;
+
+	pos_0 = find_index(a, 0);
+	pos_1 = find_index(a, 1);
+	move_to_b(pos_0, size, &pos_1);
+	move_to_b(pos_1, size, &pos_1);
 	little_sort_3(a);
-	pa(&a, &b);
+	little_sort_3(b);
 }
