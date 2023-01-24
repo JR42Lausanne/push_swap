@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:32:27 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/24 10:52:44 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/24 15:33:01 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,21 @@ void	little_sort_3(t_stack *a)
 	if (is_sorted(a))
 		return ;
 	if (elem_0 == 0 && elem_1 == 1 && elem_2 == 2)
-		ft_printf("ra\nsa\n");
+	{
+		rra(a);
+		sa(a);
+	}
 	else if (elem_0 == 1 && elem_1 == 0 && elem_2 == 2)
-		ft_printf("rra\n");
+		rra(a);
 	else if (elem_0 == 1 && elem_1 == 2 && elem_2 == 0)
-		ft_printf("sa\n");
+	{
+		ra(a);
+		sa(a);
+	}
 	else if (elem_0 == 2 && elem_1 == 0 && elem_2 == 1)
-		ft_printf("rra\nsa\n");
+		sa(a);
 	else if (elem_0 == 0 && elem_1 == 2 && elem_2 == 1)
-		ft_printf("ra\n");
+		ra(a);
 }
 
 int	find_index(t_stack *a, int to_find)
