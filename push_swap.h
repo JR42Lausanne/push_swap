@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/24 11:16:46 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/25 13:23:19 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,10 @@ void	rra(t_stack *a);
 
 // Type of sort
 void	little_sort_3(t_stack *a);
-void	little_sort_4_5(t_stack *a, t_stack *b, int size);
+void	little_sort_4(t_stack *a, t_stack *b);
+void	little_sort_5(t_stack *a, t_stack *b);
 int		is_sorted(t_stack *a);
-
+int		find_index(t_stack *a, int to_find);
 
 // Printing
 void	print_stack_big(t_stack *stack, char *stack_name);

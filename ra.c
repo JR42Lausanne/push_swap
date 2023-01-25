@@ -6,13 +6,13 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:26:17 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/24 13:48:40 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/25 14:41:09 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack *a)
+void	rra(t_stack *a)
 {
 	int		temp;
 
@@ -23,5 +23,5 @@ void	ra(t_stack *a)
 		a = a->next;
 	}
 	*(int *)a->content = temp;
-	ft_printf("ra\n");
+	ft_printf("rra\n");
 }

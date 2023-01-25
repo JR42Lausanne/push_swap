@@ -6,7 +6,7 @@
 #    By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/24 14:49:17 by jlaiti            #+#    #+#              #
-#    Updated: 2023/01/24 11:16:21 by jlaiti           ###   ########.fr        #
+#    Updated: 2023/01/25 17:10:23 by jlaiti           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ SRCS =	main.c					\
 		create_stack.c			\
 		check_sort.c			\
 		big_sort.c				\
-		little_sort.c			\
+		little_sort_3.c			\
+		little_sort_4.c			\
+		little_sort_5.c			\
 		ra.c					\
 		sa.c					\
 		rra.c					\
@@ -33,7 +35,8 @@ LIB  = libft.a
 OBJS_SRCS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
-CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g
+CDEBUGFLAGS = -D DEBUG=1 -g
+#CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g -O3
 
 CC = gcc
 

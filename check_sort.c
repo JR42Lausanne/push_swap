@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:13:12 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/24 14:55:32 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/25 13:42:14 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	check_sort(t_stack *a, t_stack *b)
 	int	size;
 
 	size = ft_lstsize(a);
-	//printf("size->%d\n", size);
 	if (size <= 5)
 	{
 		if (size == 1)
@@ -29,8 +28,10 @@ void	check_sort(t_stack *a, t_stack *b)
 		}
 		else if (size == 3)
 			little_sort_3(a);
-		else
-			little_sort_4_5(a, b, size);
+		else if (size == 4)
+			little_sort_4(a, b);
+		else if (size == 5)
+			little_sort_5(a, b);
 	}
 	else
 		big_sort(a, b, size);
