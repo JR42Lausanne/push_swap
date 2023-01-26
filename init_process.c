@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:56 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/17 15:57:28 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/26 09:51:19 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ void	init_process(t_parse *parse)
 	if (!check_double(parse))
 		ft_error(__func__);
 	i = 0;
-	/*while (i < parse->size)
-	{
-		printf("%d\n", parse->array[i]);
-		i++;
-	}*/
 }
 
 void	ft_error(const char *err_func)

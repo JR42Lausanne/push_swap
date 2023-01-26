@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:43:03 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/23 13:02:43 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/26 10:07:11 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ int	is_sorted(t_stack *a)
 	{
 		if (*(int *) a->content < *(int *) a->next->content)
 		{
-			//ft_printf("not sorted\n");
 			return (0);
 		}
 		a = a->next;
 	}
-	//ft_printf("sorted\n");
 	return (1);
 }

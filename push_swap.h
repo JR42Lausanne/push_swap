@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:22:31 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/25 13:23:19 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/26 10:24:30 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 #  define DEBUG 0
 # endif
 
-# define print_stack(stack) print_stack_big(stack, #stack);
+//# define print_stack(stack) print_stack_big(stack, #stack);
 
 typedef struct s_parse
 {
@@ -69,4 +69,9 @@ int		find_index(t_stack *a, int to_find);
 
 // Printing
 void	print_stack_big(t_stack *stack, char *stack_name);
+
+//Free
+void	free_stack(t_stack **a, t_stack **b);
+void	error_index_tab(t_parse *parse);
+
 #endif

@@ -6,7 +6,7 @@
 #    By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/24 14:49:17 by jlaiti            #+#    #+#              #
-#    Updated: 2023/01/25 17:10:23 by jlaiti           ###   ########.fr        #
+#    Updated: 2023/01/26 11:03:10 by jlaiti           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRCS =	main.c					\
 		pb.c					\
 		print_stack.c           \
 		is_sorted.c				\
+		free_stack.c			\
 
 
 NAME = push_swap
@@ -35,8 +36,7 @@ LIB  = libft.a
 OBJS_SRCS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
-CDEBUGFLAGS = -D DEBUG=1 -g
-#CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g -O3
+CDEBUGFLAGS = -D DEBUG=1 -fsanitize=address -g -O3
 
 CC = gcc
 
