@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:40:48 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/26 10:25:00 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/26 13:39:18 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,6 @@ t_stack	*create_stack(t_parse *parse)
 	i = -1;
 	while (++i < parse->size)
 		ft_lstadd_front(&a, ft_lstnew(index_tab[i]));
+	free(index_tab);
 	return (a);
 }
-/*
- (!index_tab)
-	{
-		free_parse(parse);
-		ft_error(__func__);
-	}
-*/
