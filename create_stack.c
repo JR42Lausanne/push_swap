@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:40:48 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/26 13:39:18 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/30 11:30:12 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@ void	error_index_tab(t_parse	*parse)
 {
 	free_parse(parse);
 	ft_error(__func__);
+}
+
+static t_stack	*create_stack_util(t_parse *parse, int **index_tab)
+{
+	int		i;
+	t_stack	*a;
+
+	a = NULL;
+	i = -1;
+	while (++i < parse->size)
+		ft_lstadd_front(&a, ft_lstnew(index_tab[i]));
+	return (a);
 }
 
 t_stack	*create_stack(t_parse *parse)
@@ -41,9 +53,7 @@ t_stack	*create_stack(t_parse *parse)
 		index_tab[i] = malloc(sizeof(int));
 		*index_tab[i] = count_above;
 	}
-	i = -1;
-	while (++i < parse->size)
-		ft_lstadd_front(&a, ft_lstnew(index_tab[i]));
+	a = create_stack_util(parse, index_tab);
 	free(index_tab);
 	return (a);
 }
