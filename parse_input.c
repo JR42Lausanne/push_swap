@@ -6,7 +6,7 @@
 /*   By: jlaiti <jlaiti@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:41:09 by jlaiti            #+#    #+#             */
-/*   Updated: 2023/01/17 14:41:19 by jlaiti           ###   ########.fr       */
+/*   Updated: 2023/01/30 14:14:54 by jlaiti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_stack	*parse_input(int argc, char *argv[])
 		parse.tab_str = NULL;
 	}
 	else
-		ft_error(__func__);
+		return (0);
 	a = create_stack(&parse);
 	free_parse(&parse);
 	return (a);
